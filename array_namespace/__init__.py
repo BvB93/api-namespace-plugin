@@ -2,8 +2,11 @@ from typing import TypeVar, Generic
 
 _StrT = TypeVar("_StrT", bound=str)
 
-__all__ = ["NamespaceWrapper"]
+__all__: "list[str]" = []
 
 
-class NamespaceWrapper(Generic[_StrT]):
+class _NamespaceWrapper(Generic[_StrT]):
     pass
+
+
+del TypeVar, Generic, _StrT
